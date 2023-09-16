@@ -67,7 +67,7 @@ export const MovieDetails = () => {
     }, []);
 
     if (!credits) {
-        return <div>Loading...</div>;
+        return <div className='loading-content'>Loading...</div>;
     }
 
     const director = credits.crew.find(member => member.job === 'Director');

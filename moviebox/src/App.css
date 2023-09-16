@@ -93,7 +93,7 @@ p {
 .MovieBox:hover {
   cursor: pointer;
   /* border-left: 5px solid #e50813; */
-  transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0) perspective(31.25em);
+  transform: scale3d(1.0, 1.0, 2) translate3d(2%, 0, 0) perspective(31.25em);
   box-shadow: 0px 0px 0.75em rgba(0, 0, 0, 0.9);
 }
 /* .MovieBox::after {
@@ -106,6 +106,26 @@ p {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(83, 100, 141, 0) 100%);
   z-index: -1;
 } */
+
+.fav-icon{
+  width: 30px;
+  height: 30px;
+  background-color: rgba(243, 244, 246, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+  right: 10px;
+}
+.fav-icon:hover{
+  background-color: rgba(190, 18, 60, 0.2);
+  color: #e50813;
+}
+
 .img > img {
   position: relative;
   
@@ -118,6 +138,7 @@ p {
 }
 .MovieBox .text {
   height: 120px;
+  padding-left: 5px;
   /* background-color: brown; */
 }
 

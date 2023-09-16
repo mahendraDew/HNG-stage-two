@@ -51,18 +51,8 @@ const Home = () => {
   }
   return (
     <>
-      {/* <div className='homeContainer'>
-        <Slider {...settings}>
-          {items.map((item) => {
-            return (
-              <>
-                <HomeCard key={item.id} item={item} />
-              </>
-            )
-          })}
-        </Slider>
-      </div> */}
-       <>
+      
+      
       <div className="poster">
         <Carousel showThumbs={false} autoPlay={true} transitionTime={3} infiniteLoop={true} showStatus={false}>
           {
@@ -91,7 +81,7 @@ const Home = () => {
                     {movie ? movie.overview : ""}
                   </div>
                   <div className="posterImage__Trailer">
-                    <button className='trailerBtn' > <i className="fa fa-play play" /> Watch Trailer</button>
+                    <a className='trailerBtn' > <i className="fa fa-play play" /> Watch Trailer</a>
                   </div>
                 </div>
               </Link>
@@ -99,7 +89,6 @@ const Home = () => {
           }
         </Carousel>
       </div>
-    </>
     </>
   )
 }

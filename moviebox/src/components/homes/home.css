@@ -109,13 +109,13 @@
   height: 36px;
   width: 169px;
 }
-.posterImage__Trailer > button{
+.posterImage__Trailer > a{
   /* margin-top: 20px; */
   border-radius: 6px;
   padding: 6px 16px;
   background-color: rgba(190, 18, 60, 1);
 }
-.posterImage__Trailer > button:hover{
+.posterImage__Trailer > a:hover{
   background-color: rgb(154, 7, 44);
 }
 .play{

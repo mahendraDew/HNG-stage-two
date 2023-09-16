@@ -23,6 +23,7 @@ const Ucard = ({ item }) => {
       <Link to={`/movies/${item.id}`} style={{ textDecoration: "none", color: "white" }}>
         <div className='MovieBox'>
           <div className='img'>
+            <div className="fav-icon"><i class="fa fa-heart"></i></div>
             <img className="cards__img" src={`https://image.tmdb.org/t/p/original${item ? item.poster_path : ""}`} alt="img" />
           </div>
           <div className='text'>
