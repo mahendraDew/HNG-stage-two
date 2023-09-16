@@ -21,19 +21,19 @@ const Ucard = ({ item }) => {
     <>
 
       <Link to={`/movies/${item.id}`} style={{ textDecoration: "none", color: "white" }}>
-        <div className='MovieBox'>
+        <div data-testid='movie-card' className='MovieBox'>
           <div className='img'>
             <div className="fav-icon"><i class="fa fa-heart"></i></div>
-            <img className="cards__img" src={`https://image.tmdb.org/t/p/original${item ? item.poster_path : ""}`} alt="img" />
+            <img data-testid='movie-poster' className="cards__img" src={`https://image.tmdb.org/t/p/original${item ? item.poster_path : ""}`} alt="img" />
           </div>
           <div className='text'>
             <div className='content flex'>
               <div className='details row'>
                 <div className="releaseDate">
-                  <p>{item.release_date}</p>
+                  <p data-testid='movie-release-date'>{item.release_date}</p>
                 </div>
                 <div className="tittle">
-                  <h1 >{item.original_title}</h1>
+                  <h1 data-testid='movie-title' >{item.original_title}</h1>
                 </div>
                 <div className='rating flex'>
                   <div className="posterImage__rating">

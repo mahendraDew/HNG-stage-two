@@ -75,7 +75,7 @@ export const MovieDetails = () => {
     const writers = credits.crew.filter(member => member.job === 'Screenplay' || member.job === 'Writer');
 
 
-
+    video = currentMovieDetail ? currentMovieDetail.original_title : ""
 
     return (
 
@@ -133,11 +133,11 @@ export const MovieDetails = () => {
                     <div className="movie-details">
                         <div className="movie-content">
                             <div className="movie-detail-header">
-                                <div className="movie__name"><h2>{currentMovieDetail ? currentMovieDetail.original_title : ""} . </h2></div>
-                                {video = currentMovieDetail ? currentMovieDetail.original_title : ""}
-                                <div className="movie__releaseDate movie-header-info"><h2>{currentMovieDetail ? currentMovieDetail.release_date : ""} . </h2></div>
+                                <div className="movie__name"><h2 data-testid='movie-title'>{currentMovieDetail ? currentMovieDetail.original_title : ""} . </h2></div>
+                                {/* {} */}
+                                <div className="movie__releaseDate movie-header-info"><h2 data-testid='movie-release-date'>{currentMovieDetail ? currentMovieDetail.release_date : ""} . </h2></div>
                                 <div className='movie_age_rating movie-header-info'><h2>PG-13 . </h2></div>
-                                <div className="movie__runtime movie-header-info"><h2>{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</h2></div>
+                                <div className="movie__runtime movie-header-info"><h2 data-testid='movie-runtime'>{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</h2></div>
                                 <div className="movie__genres movie-header-info"><h2>
                                     {/* {console.log(currentMovieDetail)} */}
                                     {
@@ -153,7 +153,7 @@ export const MovieDetails = () => {
                                 </div>
                             </div>
                             <div className="description">
-                                <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
+                                <div><p data-testid='movie-overview'>{currentMovieDetail ? currentMovieDetail.overview : ""}</p></div>
                             </div>
                         </div>
                         <div className="film-makers">
