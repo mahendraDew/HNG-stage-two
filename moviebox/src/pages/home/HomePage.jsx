@@ -3,6 +3,7 @@ import Homes from "../../components/homes/Homes"
 import Upcomming from "../../components/upcoming/Upcomming"
 import { latest, recommended, upcome } from "../../dummyData"
 import { NewArrival } from "../../components/new Arrival/NewArrival"
+import Header from "../../components/header/Header"
 
 const HomePage = () => {
 
@@ -13,6 +14,7 @@ const HomePage = () => {
       .then(res => res.json())
       .then(data => setItems(data.results))
   }, [])
+  const sliceItems = items.slice(0, 10);
 
   const [upItem, setUpItem] = useState([])
   useEffect(() => {
@@ -20,7 +22,7 @@ const HomePage = () => {
       .then(res => res.json())
       .then(data => setUpItem(data.results))
   }, [])
-
+  const sliceUpItem = upItem.slice(0, 10);
 
 
   // const [items, setItems] = useState(upcome)
@@ -28,10 +30,11 @@ const HomePage = () => {
   const [rec, setRec] = useState(recommended)
   return (
     <>
+      <Header />
       <Homes />
-      <Upcomming items={items} title='Featured Movies' />
+      <Upcomming items={sliceItems} title='Featured Movies' />
       {/* <Upcomming items={upItem} title='New Arrival' /> */}
-      <NewArrival items={upItem} title='New Arrival'/>
+      <NewArrival items={sliceUpItem} title='New Arrival'/>
     </>
   )
 }

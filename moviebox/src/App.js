@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route path='movies/:id' element={<MovieDetails />}></Route>

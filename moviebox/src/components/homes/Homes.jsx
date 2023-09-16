@@ -4,12 +4,12 @@ import { homeData } from "../../dummyData"
 import Home from "./Home"
 
 const Homes = () => {
-  const [items, setItems] = useState(homeData)
+  // const [items, setItems] = useState(homeData)
 
   return (
     <>
       <section className='home'>
-        <Home items={items} />
+        <Home  />
       </section>
       <div className='mragin'></div>
     </>

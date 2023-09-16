@@ -27,7 +27,7 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
-const Home = ({ items }) => {
+const Home = () => {
 
   
   const [popularMovies, setPopularMovies] = useState([])
@@ -37,6 +37,8 @@ const Home = ({ items }) => {
       .then(res => res.json())
       .then(data => setPopularMovies(data.results))
   }, [])
+
+  const slicePopularMovies = popularMovies.slice(0, 10);
   
   const settings = {
     dots: false,
@@ -64,7 +66,7 @@ const Home = ({ items }) => {
       <div className="poster">
         <Carousel showThumbs={false} autoPlay={true} transitionTime={3} infiniteLoop={true} showStatus={false}>
           {
-            popularMovies.map(movie => (
+            slicePopularMovies.map(movie => (
               <Link style={{ textDecoration: "none", color: "white" }} to={`/movies/${movie.id}`}>
                 <div className="posterImage">
                   <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt="" />
